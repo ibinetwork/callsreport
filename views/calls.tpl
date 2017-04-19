@@ -213,7 +213,7 @@
     function openAudio(url) {
 
 
-      var html = '<div id="waveform" style="min-height:220px;"><div class="loading label label-primary"><?php echo _(\'Loading\');?>...</div>';
+      var html = '<div id="waveform" style="min-height:220px;"><div class="loading label label-primary"><?php echo _("Loading");?>...</div>';
       html += '</div>';
 
       html += '<div class="row" style="text-align:center;margin-bottom:10px;margin-top:10px;">';
