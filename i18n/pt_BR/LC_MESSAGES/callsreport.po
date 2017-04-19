@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-19 15:46-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-04-19 16:10-0300\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: /home/rafael/callsreport/bin/verify_scheduling.php:113
 msgid "The autoloader is damaged. Please run: "
@@ -47,13 +47,13 @@ msgstr ""
 
 #: /home/rafael/callsreport/functions.inc.php:668
 #: /home/rafael/callsreport/functions.inc.php:674
-msgid "Primeira"
-msgstr ""
+msgid "First"
+msgstr "Primeira"
 
 #: /home/rafael/callsreport/functions.inc.php:737
 #: /home/rafael/callsreport/functions.inc.php:743
-msgid "Última"
-msgstr ""
+msgid "Last"
+msgstr "Última"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:8
 #: /home/rafael/callsreport/views/scheduling_add.tpl:38
@@ -65,7 +65,7 @@ msgstr ""
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:41
 #: /home/rafael/callsreport/views/scheduling.tpl:8
 msgid "Calls Report"
-msgstr ""
+msgstr "Relatório de Chamadas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:11
 #: /home/rafael/callsreport/views/scheduling_add.tpl:39
@@ -77,7 +77,7 @@ msgstr ""
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:43
 #: /home/rafael/callsreport/views/scheduling.tpl:11
 msgid "Agents Report"
-msgstr ""
+msgstr "Relatório de Agentes"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:14
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:14
@@ -86,24 +86,24 @@ msgstr ""
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:14
 #: /home/rafael/callsreport/views/scheduling.tpl:14
 msgid "Scheduling"
-msgstr ""
+msgstr "Agendamento"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:26
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:28
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:26
 #: /home/rafael/callsreport/views/scheduling.tpl:26
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:31
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:33
 msgid "Destination E-mails"
-msgstr ""
+msgstr "Emails de Destino"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:36
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:39
 msgid "Report Type"
-msgstr ""
+msgstr "Tipo de Relatório"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:43
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:57
@@ -114,51 +114,51 @@ msgstr ""
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:28
 #: /home/rafael/callsreport/views/scheduling.tpl:28
 msgid "Extensions"
-msgstr ""
+msgstr "Ramais"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:53
 #: /home/rafael/callsreport/views/scheduling_add.tpl:55
 msgid "Extension"
-msgstr ""
+msgstr "Ramal"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:77
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:91
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:30
 #: /home/rafael/callsreport/views/scheduling.tpl:29
 msgid "Periodicity"
-msgstr ""
+msgstr "Periodicidade"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:80
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:94
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:50
 msgid "Monthly"
-msgstr ""
+msgstr "Mensalmente"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:81
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:95
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:52
 msgid "Weekly"
-msgstr ""
+msgstr "Semanalmente"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:82
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:96
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:54
 msgid "Daily"
-msgstr ""
+msgstr "Diariamente"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:83
 #: /home/rafael/callsreport/views/scheduling_add.tpl:218
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:97
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:232
 msgid "Hourly"
-msgstr ""
+msgstr "De hora em hora"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:89
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:103
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:31
 #: /home/rafael/callsreport/views/scheduling.tpl:30
 msgid "Day"
-msgstr ""
+msgstr "Diariamente"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:94
 #: /home/rafael/callsreport/views/scheduling_add.tpl:143
@@ -169,171 +169,171 @@ msgstr ""
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:33
 #: /home/rafael/callsreport/views/scheduling.tpl:32
 msgid "Hour"
-msgstr ""
+msgstr "Hora"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:129
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:143
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:32
 #: /home/rafael/callsreport/views/scheduling.tpl:31
 msgid "Week Day"
-msgstr ""
+msgstr "Dia da Semana"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:132
 msgid "Sunday"
-msgstr ""
+msgstr "Domingo"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:133
 msgid "Monday"
-msgstr ""
+msgstr "Segunda-Feira"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:134
 msgid "Tuesday"
-msgstr ""
+msgstr "Terça-Feira"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:135
 msgid "Wednesday"
-msgstr ""
+msgstr "Quarta-Feira"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:136
 msgid "Thursday"
-msgstr ""
+msgstr "Quinta-Feira"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:137
 msgid "Friday"
-msgstr ""
+msgstr "Sexta-Feira"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:138
 msgid "Saturday"
-msgstr ""
+msgstr "Sábado"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:215
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:229
 msgid "Period"
-msgstr ""
+msgstr "Período"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:219
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:233
 msgid "Every two hours"
-msgstr ""
+msgstr "A cada duas horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:220
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:234
 msgid "Every three hours"
-msgstr ""
+msgstr "A cada três horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:221
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:235
 msgid "Every four hours"
-msgstr ""
+msgstr "A cada quatro horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:222
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:236
 msgid "Every five hours"
-msgstr ""
+msgstr "A cada cinco horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:223
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:237
 msgid "Every six hours"
-msgstr ""
+msgstr "A cada seis horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:224
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:238
 msgid "Every seven hours"
-msgstr ""
+msgstr "A cada sete horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:225
 msgid "Every eigth hours"
-msgstr ""
+msgstr "A cada oito horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:226
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:240
 msgid "Every none hours"
-msgstr ""
+msgstr "A cada nove horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:227
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:241
 msgid "Every ten hours"
-msgstr ""
+msgstr "A cada dez horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:228
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:242
 msgid "Every eleven hours"
-msgstr ""
+msgstr "A cada onze horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:229
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:243
 msgid "Every twelve hours"
-msgstr ""
+msgstr "A cada doze horas"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:235
 msgid "Initial Time Limit"
-msgstr ""
+msgstr "Hora Limite Inicial"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:268
 msgid "Final Time Limit"
-msgstr ""
+msgstr "Hora Limite Final"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:301
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:317
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: /home/rafael/callsreport/views/scheduling_add.tpl:303
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:319
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:82
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:239
 msgid "Every eight hours"
-msgstr ""
+msgstr "A cada oito horas"
 
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:250
 msgid "Initial Limit Time"
-msgstr ""
+msgstr "Hora Limite Inicial"
 
 #: /home/rafael/callsreport/views/scheduling_edit.tpl:283
 msgid "Final Limit Time"
-msgstr ""
+msgstr "Hora Limite Final"
 
 #: /home/rafael/callsreport/views/agents.tpl:24
 #: /home/rafael/callsreport/views/calls.tpl:25
 msgid "Search"
-msgstr ""
+msgstr "Procurar"
 
 #: /home/rafael/callsreport/views/agents.tpl:27
 #: /home/rafael/callsreport/views/calls.tpl:28
 msgid "Clean Filter"
-msgstr ""
+msgstr "Limpar Filtro"
 
 #: /home/rafael/callsreport/views/agents.tpl:32
 #: /home/rafael/callsreport/views/calls.tpl:33
 msgid "Of"
-msgstr ""
+msgstr "De"
 
 #: /home/rafael/callsreport/views/agents.tpl:38
 #: /home/rafael/callsreport/views/calls.tpl:39
 msgid "Until"
-msgstr ""
+msgstr "Até"
 
 #: /home/rafael/callsreport/views/agents.tpl:54
 #: /home/rafael/callsreport/views/agents.tpl:56
 #: /home/rafael/callsreport/views/calls.tpl:89
 #: /home/rafael/callsreport/views/calls.tpl:91
 msgid "Exten"
-msgstr ""
+msgstr "Ramal"
 
 #: /home/rafael/callsreport/views/agents.tpl:86
 msgid "Agent"
-msgstr ""
+msgstr "Agente"
 
 #: /home/rafael/callsreport/views/agents.tpl:88
 msgid "Inbound"
-msgstr ""
+msgstr "Entrante"
 
 #: /home/rafael/callsreport/views/agents.tpl:89
 msgid "Outbound"
-msgstr ""
+msgstr "Sainte"
 
 #: /home/rafael/callsreport/views/agents.tpl:90
 #: /home/rafael/callsreport/views/agents.tpl:95
@@ -342,109 +342,109 @@ msgstr ""
 #: /home/rafael/callsreport/views/agents.tpl:197
 #: /home/rafael/callsreport/views/calls.tpl:180
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: /home/rafael/callsreport/views/agents.tpl:93
 #: /home/rafael/callsreport/views/agents.tpl:96
 #: /home/rafael/callsreport/views/agents.tpl:99
 msgid "Answer"
-msgstr ""
+msgstr "Atendida"
 
 #: /home/rafael/callsreport/views/agents.tpl:94
 #: /home/rafael/callsreport/views/agents.tpl:97
 #: /home/rafael/callsreport/views/agents.tpl:100
 msgid "No Answered"
-msgstr ""
+msgstr "Não Atendida"
 
 #: /home/rafael/callsreport/views/agents.tpl:192
 #: /home/rafael/callsreport/views/calls.tpl:175
 msgid "Export PDF"
-msgstr ""
+msgstr "Exportar PDF"
 
 #: /home/rafael/callsreport/views/calls.tpl:45
 #: /home/rafael/callsreport/views/calls.tpl:123
 msgid "Source"
-msgstr ""
+msgstr "Origem"
 
 #: /home/rafael/callsreport/views/calls.tpl:50
 #: /home/rafael/callsreport/views/calls.tpl:124
 msgid "Destination"
-msgstr ""
+msgstr "Destino"
 
 #: /home/rafael/callsreport/views/calls.tpl:55
 msgid "Number"
-msgstr ""
+msgstr "Número"
 
 #: /home/rafael/callsreport/views/calls.tpl:70
 msgid "Disposition"
-msgstr ""
+msgstr "Estado"
 
 #: /home/rafael/callsreport/views/calls.tpl:120
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: /home/rafael/callsreport/views/calls.tpl:121
 msgid "Time"
-msgstr ""
+msgstr "Hora"
 
 #: /home/rafael/callsreport/views/calls.tpl:122
 msgid "CallerID"
-msgstr ""
+msgstr "CallerID"
 
 #: /home/rafael/callsreport/views/calls.tpl:125
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: /home/rafael/callsreport/views/calls.tpl:126
 msgid "Duration"
-msgstr ""
+msgstr "Duração"
 
 #: /home/rafael/callsreport/views/calls.tpl:127
 msgid "Ring Time"
-msgstr ""
+msgstr "Ring Time"
 
 #: /home/rafael/callsreport/views/calls.tpl:128
 msgid "Talking Time"
-msgstr ""
+msgstr "Talk Time"
 
 #: /home/rafael/callsreport/views/calls.tpl:129
 msgid "Áudio File"
-msgstr ""
+msgstr "Arquivo de Áudio"
 
 #: /home/rafael/callsreport/views/calls.tpl:216
-msgid "Loading');?>...</div>"
-msgstr ""
+msgid "Loading"
+msgstr "Carregando"
 
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:27
 #: /home/rafael/callsreport/views/scheduling.tpl:27
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:29
 msgid "Emails"
-msgstr ""
+msgstr "Emails"
 
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:79
 msgid "Do you want to remove this schedule"
-msgstr ""
+msgstr "Deseja realmente remover este agendamento"
 
 #: /home/rafael/callsreport/views/scheduling_remove.tpl:81
 #: /home/rafael/callsreport/views/scheduling.tpl:113
 msgid "Remove"
-msgstr ""
+msgstr "Remover"
 
 #: /home/rafael/callsreport/views/scheduling.tpl:20
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: /home/rafael/callsreport/views/scheduling.tpl:33
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: /home/rafael/callsreport/views/scheduling.tpl:110
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: /home/rafael/callsreport/views/scheduling.tpl:123
 msgid "No scheduling"
-msgstr ""
+msgstr "Sem agendamentos"
