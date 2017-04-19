@@ -665,13 +665,13 @@ function callsreport_get_pagination($total, $itenspp, $page) {
     if($first == $page) {
         $html .= '<li class="disabled">';
         $html .=    "<a href=\"#\">";
-        $html .=        _('Primeira');
+        $html .=        _('First');
         $html .=    '</a>';
         $html .= '</li>';
     }else{
         $html .= '<li>';
         $html .=    "<a href=\"$url$first\">";
-        $html .=        _('Primeira');
+        $html .=        _('Last');
         $html .=    '</a>';
         $html .= '</li>';
     }
@@ -734,13 +734,13 @@ function callsreport_get_pagination($total, $itenspp, $page) {
     if($page == $last) {
         $html .= '<li class="disabled">';
         $html .=    "<a href=\"#\">";
-        $html .=        _('Última');
+        $html .=        _('Last');
         $html .=    '</a>';
         $html .= '</li>';
     }else{
         $html .= '<li>';
         $html .=    "<a href=\"$url$last\">";
-        $html .=        _('Última');
+        $html .=        _('Last');
         $html .=    '</a>';
         $html .= '</li>';
     }
