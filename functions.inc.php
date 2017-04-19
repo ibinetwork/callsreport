@@ -18,31 +18,6 @@ function callreport_db() {
     
 
     return $dbcdr;
-
-    // echo '<pre>';
-    // print_r($amp_conf['CDRDBHOST']);
-    // print_r($amp_conf['CDRDBTYPE']);
-    // echo '</pre>';
-    // exit;
-
-    // if (!empty($amp_conf["CDRDBHOST"]) && !empty($amp_conf["CDRDBTYPE"])) {
-
-    //     $db_name = 'asteriskcdrdb';
-    //     $db_hash = array('mysql' => 'mysql', 'postgres' => 'pgsql');
-    //     $db_type = 'mysql';
-    //     $db_host = $amp_conf["CDRDBHOST"];
-    //     $db_port = empty($amp_conf["CDRDBPORT"]) ? '' :  ':' . $amp_conf["CDRDBPORT"];
-    //     $db_user = empty($amp_conf["CDRDBUSER"]) ? $amp_conf["AMPDBUSER"] : $amp_conf["CDRDBUSER"];
-    //     $db_pass = empty($amp_conf["CDRDBPASS"]) ? $amp_conf["AMPDBPASS"] : $amp_conf["CDRDBPASS"];
-    //     $datasource = $db_type . '://' . $db_user . ':' . $db_pass . '@' . $db_host . $db_port . '/' . $db_name;
-    //     $dbcdr = DB::connect($datasource); // attempt connection
-    //     if(DB::isError($dbcdr)) {
-    //         die_freepbx($dbcdr->getDebugInfo());
-    //     }
-    // } else {
-    //     $dbcdr = $db;
-    // }
-    // return $dbcdr;
 }
 
 function callsreport_get_agentsreport($db, $callsreport, $count = 0, $limit = 30, $offset = false, $pdf = false) {
