@@ -5,32 +5,32 @@
 
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport" role="tab">Relatório de Chamadas</a>
+      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
     </li>
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab">Relatório de Agentes</a>
+      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
     </li>
     <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab">Agendamentos</a>
+      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
     </li>
   </ul>
 
   <div class="tab-content display">
     <div role="tabpanel" class="tab-pane active" style="padding-top: 15px;">        
-    	<a href="/admin/config.php?display=callsreport&action=scheduling&method=add" class="btn btn-default"> <i class="glyphicon glyphicon-plus"></i> Novo</a>
+    	<a href="/admin/config.php?display=callsreport&action=scheduling&method=add" class="btn btn-default"> <i class="glyphicon glyphicon-plus"></i> <?php echo _('Add');?></a>
     </div>
 
     <table class="table table-striped table-hover table-responsive" style="margin-top:20px;">
       <thead>
             <tr>
-                <td><b>Descrição</b></td>
-                <td><b>Tipo</b></td>
-                <td><b>Extensões</b></td>
-                <td><b>Periodicidade</b></td>
-                <td><b>Dia</b></td>
-                <td><b>Dia da Semana</b></td>
-                <td><b>Hora</b></td>
-                <td style="width:200px;"><b>Ações</b></td>
+                <td><b><?php echo _('Description');?></b></td>
+                <td><b><?php echo _('Type');?></b></td>
+                <td><b><?php echo _('Extensions');?></b></td>
+                <td><b><?php echo _('Periodicity');?></b></td>
+                <td><b><?php echo _('Day');?></b></td>
+                <td><b><?php echo _('Week Day');?></b></td>
+                <td><b><?php echo _('Hour');?></b></td>
+                <td style="width:200px;"><b><?php echo _('Actions');?></b></td>
             </tr>
       </thead>
       <tbody>
@@ -107,10 +107,10 @@
                      </td>
                     <td style="width: 50px;">
                         <a href="/admin/config.php?display=callsreport&action=scheduling&method=edit&id=<?php echo $evento['id'];?>" class="btn btn-sm btn-default">
-                          <i class="glyphicon glyphicon-pencil"></i> Editar
+                          <i class="glyphicon glyphicon-pencil"></i> <?php echo _('Edit');?>
                         </a>
                         <a href="/admin/config.php?display=callsreport&action=scheduling&method=remove&id=<?php echo $evento['id'];?>" class="btn btn-sm btn-default">
-                          <i class="glyphicon glyphicon-trash"></i> Remover
+                          <i class="glyphicon glyphicon-trash"></i> <?php echo _('Remove');?>
                         </a>
                     </td>
                 </tr>
@@ -120,7 +120,7 @@
     </table>
       <?php if(count($scheduling) < 1): ?>
         <div class="alert alert-info">
-          Nenhum agendamento cadastrado
+          <?php echo _('No scheduling');?>
         </div>            
       <?php endif; ?>
   </div>
@@ -131,10 +131,8 @@
 <script src="/admin/assets/callsreport/js/jquery.datetimepicker.js"></script>
 <script src="/admin/assets/callsreport/js/bootstrap-multiselect.js"></script>
 <script type="text/javascript">
-
   $(document).ready(function() {
 
 
   });
-
 </script>

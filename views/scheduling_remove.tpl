@@ -5,13 +5,13 @@
 
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport" role="tab">Relatório de Chamadas</a>
+      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
     </li>
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab">Relatório de Agentes</a>
+      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
     </li>
     <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab">Agendamentos</a>
+      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
     </li>
   </ul>
 
@@ -23,14 +23,14 @@
         <table class="table table-striped table-hover table-responsive" style="margin-top:20px;">
           <thead>
                 <tr>
-                    <td><b>Descrição</b></td>
-                    <td><b>Tipo</b></td>
-                    <td><b>Extensões</b></td>
-                    <td><b>E-mail de Destino</b></td>
-                    <td><b>Periodicidade</b></td>
-                    <td><b>Dia</b></td>
-                    <td><b>Dia da Semana</b></td>
-                    <td><b>Hora</b></td>
+                  <td><b><?php echo _('Description');?></b></td>
+                  <td><b><?php echo _('Type');?></b></td>
+                  <td><b><?php echo _('Extensions');?></b></td>
+                  <td><b><?php echo _('Emails');?></b></td>
+                  <td><b><?php echo _('Periodicity');?></b></td>
+                  <td><b><?php echo _('Day');?></b></td>
+                  <td><b><?php echo _('Week Day');?></b></td>
+                  <td><b><?php echo _('Hour');?></b></td>
                 </tr>
           </thead>
           <tbody>
@@ -38,20 +38,20 @@
                 <td> <?php echo $scheduling['description'] ?> </td>
                 <td> 
                   <?php if($scheduling['type'] == 0): ?> 
-                      Relatório de Chamadas
+                      <?php echo _('Calls Report');?>
                   <?php elseif($scheduling['type'] == 1): ?> 
-                      Relatório de Agentes
+                      <?php echo _('Agents Report');?>
                   <?php endif; ?> 
                 </td>
                 <td> <?php echo $scheduling['extens'] ?> </td>
                 <td> <?php echo $scheduling['email'] ?> </td>
                 <td> 
                   <?php if($scheduling['type'] == 0): ?> 
-                      Mensal
+                      <?php echo _('Monthly');?>
                   <?php elseif($scheduling['type'] == 1): ?> 
-                      Semanal
+                      <?php echo _('Weekly');?>
                   <?php elseif($scheduling['type'] == 2): ?> 
-                      Diário
+                      <?php echo _('Daily');?>
                   <?php endif; ?>
                 </td>
                 <td> 
@@ -76,10 +76,10 @@
           </tbody>
         </table>
 
-        <h3 style="text-align:center;">Deseja remover este agendamento?</h3>
+        <h3 style="text-align:center;"> <?php echo _('Do you want to remove this schedule');?> </h3>
           
-        <button type="submit" class="btn btn-primary pull-right" style="margin-left:3px;">Remover</button>
-        <a href="/admin/config.php?display=callsreport&action=scheduling" class="btn btn-primary pull-right">Cancelar</a>
+        <button type="submit" class="btn btn-primary pull-right" style="margin-left:3px;"><?php echo _('Remove');?></button>
+        <a href="/admin/config.php?display=callsreport&action=scheduling" class="btn btn-primary pull-right"><?php echo _('Cancel');?></a>
         <br />
         <br />
       </form>    	

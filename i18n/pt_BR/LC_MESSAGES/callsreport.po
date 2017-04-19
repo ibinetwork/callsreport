@@ -1,0 +1,450 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-19 15:46-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/rafael/callsreport/bin/verify_scheduling.php:113
+msgid "The autoloader is damaged. Please run: "
+msgstr ""
+
+#: /home/rafael/callsreport/bin/verify_scheduling.php:202
+msgid ".htaccess files are disable on this webserver. Please enable them"
+msgstr ""
+
+#: /home/rafael/callsreport/bin/verify_scheduling.php:203
+#, php-format
+msgid ""
+"To protect the integrity of your server, you must allow overrides in your "
+"webserver's configuration file for the User Control Panel. For more "
+"information see: %s"
+msgstr ""
+
+#: /home/rafael/callsreport/bin/verify_scheduling.php:215
+msgid ".htaccess files are not supported on this webserver."
+msgstr ""
+
+#: /home/rafael/callsreport/bin/verify_scheduling.php:216
+#, php-format
+msgid ""
+"htaccess files help protect the integrity of your server. Please make sure "
+"file paths and directories are locked down properly. For more information "
+"see: %s"
+msgstr ""
+
+#: /home/rafael/callsreport/functions.inc.php:668
+#: /home/rafael/callsreport/functions.inc.php:674
+msgid "Primeira"
+msgstr ""
+
+#: /home/rafael/callsreport/functions.inc.php:737
+#: /home/rafael/callsreport/functions.inc.php:743
+msgid "Última"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:8
+#: /home/rafael/callsreport/views/scheduling_add.tpl:38
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:8
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:41
+#: /home/rafael/callsreport/views/agents.tpl:8
+#: /home/rafael/callsreport/views/calls.tpl:9
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:8
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:41
+#: /home/rafael/callsreport/views/scheduling.tpl:8
+msgid "Calls Report"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:11
+#: /home/rafael/callsreport/views/scheduling_add.tpl:39
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:11
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:42
+#: /home/rafael/callsreport/views/agents.tpl:11
+#: /home/rafael/callsreport/views/calls.tpl:12
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:11
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:43
+#: /home/rafael/callsreport/views/scheduling.tpl:11
+msgid "Agents Report"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:14
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:14
+#: /home/rafael/callsreport/views/agents.tpl:14
+#: /home/rafael/callsreport/views/calls.tpl:15
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:14
+#: /home/rafael/callsreport/views/scheduling.tpl:14
+msgid "Scheduling"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:26
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:28
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:26
+#: /home/rafael/callsreport/views/scheduling.tpl:26
+msgid "Description"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:31
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:33
+msgid "Destination E-mails"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:36
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:39
+msgid "Report Type"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:43
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:57
+#: /home/rafael/callsreport/views/agents.tpl:45
+#: /home/rafael/callsreport/views/calls.tpl:63
+#: /home/rafael/callsreport/views/calls.tpl:65
+#: /home/rafael/callsreport/views/calls.tpl:82
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:28
+#: /home/rafael/callsreport/views/scheduling.tpl:28
+msgid "Extensions"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:53
+#: /home/rafael/callsreport/views/scheduling_add.tpl:55
+msgid "Extension"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:77
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:91
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:30
+#: /home/rafael/callsreport/views/scheduling.tpl:29
+msgid "Periodicity"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:80
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:94
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:50
+msgid "Monthly"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:81
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:95
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:52
+msgid "Weekly"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:82
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:96
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:54
+msgid "Daily"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:83
+#: /home/rafael/callsreport/views/scheduling_add.tpl:218
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:97
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:232
+msgid "Hourly"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:89
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:103
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:31
+#: /home/rafael/callsreport/views/scheduling.tpl:30
+msgid "Day"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:94
+#: /home/rafael/callsreport/views/scheduling_add.tpl:143
+#: /home/rafael/callsreport/views/scheduling_add.tpl:179
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:108
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:157
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:193
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:33
+#: /home/rafael/callsreport/views/scheduling.tpl:32
+msgid "Hour"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:129
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:143
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:32
+#: /home/rafael/callsreport/views/scheduling.tpl:31
+msgid "Week Day"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:132
+msgid "Sunday"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:133
+msgid "Monday"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:134
+msgid "Tuesday"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:135
+msgid "Wednesday"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:136
+msgid "Thursday"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:137
+msgid "Friday"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:138
+msgid "Saturday"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:215
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:229
+msgid "Period"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:219
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:233
+msgid "Every two hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:220
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:234
+msgid "Every three hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:221
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:235
+msgid "Every four hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:222
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:236
+msgid "Every five hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:223
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:237
+msgid "Every six hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:224
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:238
+msgid "Every seven hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:225
+msgid "Every eigth hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:226
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:240
+msgid "Every none hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:227
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:241
+msgid "Every ten hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:228
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:242
+msgid "Every eleven hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:229
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:243
+msgid "Every twelve hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:235
+msgid "Initial Time Limit"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:268
+msgid "Final Time Limit"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:301
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:317
+msgid "Save"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_add.tpl:303
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:319
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:82
+msgid "Cancel"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:239
+msgid "Every eight hours"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:250
+msgid "Initial Limit Time"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_edit.tpl:283
+msgid "Final Limit Time"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:24
+#: /home/rafael/callsreport/views/calls.tpl:25
+msgid "Search"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:27
+#: /home/rafael/callsreport/views/calls.tpl:28
+msgid "Clean Filter"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:32
+#: /home/rafael/callsreport/views/calls.tpl:33
+msgid "Of"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:38
+#: /home/rafael/callsreport/views/calls.tpl:39
+msgid "Until"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:54
+#: /home/rafael/callsreport/views/agents.tpl:56
+#: /home/rafael/callsreport/views/calls.tpl:89
+#: /home/rafael/callsreport/views/calls.tpl:91
+msgid "Exten"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:86
+msgid "Agent"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:88
+msgid "Inbound"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:89
+msgid "Outbound"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:90
+#: /home/rafael/callsreport/views/agents.tpl:95
+#: /home/rafael/callsreport/views/agents.tpl:98
+#: /home/rafael/callsreport/views/agents.tpl:101
+#: /home/rafael/callsreport/views/agents.tpl:197
+#: /home/rafael/callsreport/views/calls.tpl:180
+msgid "Total"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:93
+#: /home/rafael/callsreport/views/agents.tpl:96
+#: /home/rafael/callsreport/views/agents.tpl:99
+msgid "Answer"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:94
+#: /home/rafael/callsreport/views/agents.tpl:97
+#: /home/rafael/callsreport/views/agents.tpl:100
+msgid "No Answered"
+msgstr ""
+
+#: /home/rafael/callsreport/views/agents.tpl:192
+#: /home/rafael/callsreport/views/calls.tpl:175
+msgid "Export PDF"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:45
+#: /home/rafael/callsreport/views/calls.tpl:123
+msgid "Source"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:50
+#: /home/rafael/callsreport/views/calls.tpl:124
+msgid "Destination"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:55
+msgid "Number"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:70
+msgid "Disposition"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:120
+msgid "Date"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:121
+msgid "Time"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:122
+msgid "CallerID"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:125
+msgid "Status"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:126
+msgid "Duration"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:127
+msgid "Ring Time"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:128
+msgid "Talking Time"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:129
+msgid "Áudio File"
+msgstr ""
+
+#: /home/rafael/callsreport/views/calls.tpl:216
+msgid "Loading');?>...</div>"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:27
+#: /home/rafael/callsreport/views/scheduling.tpl:27
+msgid "Type"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:29
+msgid "Emails"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:79
+msgid "Do you want to remove this schedule"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling_remove.tpl:81
+#: /home/rafael/callsreport/views/scheduling.tpl:113
+msgid "Remove"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling.tpl:20
+msgid "Add"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling.tpl:33
+msgid "Actions"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling.tpl:110
+msgid "Edit"
+msgstr ""
+
+#: /home/rafael/callsreport/views/scheduling.tpl:123
+msgid "No scheduling"
+msgstr ""

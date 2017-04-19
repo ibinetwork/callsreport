@@ -5,13 +5,13 @@
 
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport" role="tab">Relatório de Chamadas</a>
+      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
     </li>
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab">Relatório de Agentes</a>
+      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
     </li>
     <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab">Agendamentos</a>
+      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
     </li>
   </ul>
 
@@ -25,21 +25,21 @@
           <input type="hidden" name="scheduling[id]" value="<?php echo $scheduling['id'];?>" />
 
           <div class="form-group"  style="margin-top:6px;">
-            <small><b>Descrição:</b></small>
+            <small><b><?php echo _('Description');?>:</b></small>
             <input type="text" name="scheduling[description]" placeholder="Breve descrição" value="<?php echo $scheduling['description']; ?>" class="form-control" />
           </div>   
 
           <div class="form-group"  style="margin-top:6px;">
-            <small><b>E-mail(s) Destino:</b></small>
+            <small><b><?php echo _('Destination E-mails');?>:</b></small>
             <input type="text" name="scheduling[email]" placeholder="email1@empresa.com.br,email2@empresa.com.br" value="<?php echo $scheduling['email']; ?>"  class="form-control" />
           </div>   
 
 
           <div class="form-group"  style="margin-top:6px;">
-            <small><b>Tipo de Relatório:</b></small>
+            <small><b><?php echo _('Report Type');?>:</b></small>
             <select class="dropdown-toggle btn btn-default form-control input-sm" name="scheduling[type]">
-                <option value="0" <?php echo ($scheduling['type'] == 0 ? 'selected' : ''); ?>>Relatório de Chamadas</option>
-                <option value="1" <?php echo ($scheduling['type'] == 1 ? 'selected' : ''); ?>>Relatório de Agentes</option>            
+                <option value="0" <?php echo ($scheduling['type'] == 0 ? 'selected' : ''); ?>><?php echo _('Calls Report');?></option>
+                <option value="1" <?php echo ($scheduling['type'] == 1 ? 'selected' : ''); ?>><?php echo _('Agents Report');?></option>            
             </select>
           </div>    
 
@@ -54,7 +54,7 @@
           </div>  
 -->
           <div class="form-group"  style="margin-top:6px;">
-            <small><b>Ramais:</b></small>
+            <small><b><?php echo _('Extensions');?>:</b></small>
             <div style="width:100%;height:192px;margin-top:8px;border-top:1px solid #fff;" class="busca_ramal">
                   <div class="col-xs-12" style="padding-left:15px;">
                     
@@ -88,24 +88,24 @@
 
 
           <div class="form-group"  style="margin-top:6px;">
-            <small><b>Periodicidade:</b></small>
+            <small><b><?php echo _('Periodicity');?>:</b></small>
             <br />
             <select class="dropdown-toggle btn btn-default form-control input-sm" name="scheduling[periodicity]">
-                <option value="0" <?php echo ($scheduling['periodicity'] == 0 ? 'selected' : ''); ?>>Mensal</option>
-                <option value="1" <?php echo ($scheduling['periodicity'] == 1 ? 'selected' : ''); ?>>Semanal</option>
-                <option value="2" <?php echo ($scheduling['periodicity'] == 2 ? 'selected' : ''); ?>>Diário</option>
-                <option value="3" <?php echo ($scheduling['periodicity'] == 3 ? 'selected' : ''); ?>>Por Hora</option>
+                <option value="0" <?php echo ($scheduling['periodicity'] == 0 ? 'selected' : ''); ?>><?php echo _('Monthly');?></option>
+                <option value="1" <?php echo ($scheduling['periodicity'] == 1 ? 'selected' : ''); ?>><?php echo _('Weekly');?></option>
+                <option value="2" <?php echo ($scheduling['periodicity'] == 2 ? 'selected' : ''); ?>><?php echo _('Daily');?></option>
+                <option value="3" <?php echo ($scheduling['periodicity'] == 3 ? 'selected' : ''); ?>><?php echo _('Hourly');?></option>
             </select>
           </div>  
 
           <div class=" mensal">
             <div class="form-group"  style="margin-top:6px;" >
-              <small><b>Dia:</b></small>
+              <small><b><?php echo _('Day');?>:</b></small>
               <br />
               <input type="text" value="<?php echo $scheduling['day'];?>" class="form-control" name="scheduling[day]" />
             </div>  
             <div class="form-group"  style="margin-top:6px;" >
-              <small><b>Hora:</b></small>
+              <small><b><?php echo _('Hour');?>:</b></small>
               <br />
               <select class="form-control" name="scheduling[month_hour]">
                 <option value="0" <?php echo ($scheduling['hour'] == 0 ? 'selected' : ''); ?>>00:00</option>
@@ -140,7 +140,7 @@
 
           <div class="semanal" style="display:none">
             <div class="form-group"  style="margin-top:6px;" >
-              <small><b>Dia da Semana:</b></small>
+              <small><b><?php echo _('Week Day');?>:</b></small>
               <br />
               <select class="form-control" name="scheduling[week_day]">
                 <option value="0" <?php echo ($scheduling['week_day'] == 0 ? 'selected' : ''); ?>>Domingo</option>
@@ -154,7 +154,7 @@
 
             </div>  
             <div class="form-group"  style="margin-top:6px;" >
-              <small><b>Hora:</b></small>
+              <small><b><?php echo _('Hour');?>:</b></small>
               <br />
               <select class="form-control" name="scheduling[week_hour]">
                 <option value="0" <?php echo ($scheduling['hour'] == 0 ? 'selected' : ''); ?>>00:00</option>
@@ -190,7 +190,7 @@
 
           <div class="diario" style="display:none;">
             <div class="form-group"  style="margin-top:6px;" >
-              <small><b>Hora:</b></small>
+              <small><b><?php echo _('Hour');?>:</b></small>
               <br />
               <select class="form-control" name="scheduling[day_hour]">
                 <option value="0" <?php echo ($scheduling['hour'] == 0 ? 'selected' : ''); ?>>00:00</option>
@@ -226,28 +226,28 @@
 
           <div class="por_hora" style="display:none;">
             <div class="form-group"  style="margin-top:6px;" >
-              <small><b>Período de Horas:</b></small>
+              <small><b><?php echo _('Period');?>:</b></small>
               <br />
               <select class="form-control" name="scheduling[hour]">
-                <option value="1" <?php echo ($scheduling['hour'] == 1 ? 'selected' : ''); ?>>De hora em Hora</option>
-                <option value="2" <?php echo ($scheduling['hour'] == 2 ? 'selected' : ''); ?>>A cada duas horas</option>
-                <option value="3" <?php echo ($scheduling['hour'] == 3 ? 'selected' : ''); ?>>A cada três horas</option>
-                <option value="4" <?php echo ($scheduling['hour'] == 4 ? 'selected' : ''); ?>>A cada quatro horas</option>
-                <option value="5" <?php echo ($scheduling['hour'] == 5 ? 'selected' : ''); ?>>A cada cinco horas</option>
-                <option value="6" <?php echo ($scheduling['hour'] == 6 ? 'selected' : ''); ?>>A cada seis horas</option>
-                <option value="7" <?php echo ($scheduling['hour'] == 7 ? 'selected' : ''); ?>>A cada sete horas</option>
-                <option value="8" <?php echo ($scheduling['hour'] == 8 ? 'selected' : ''); ?>>A cada oito horas</option>
-                <option value="9" <?php echo ($scheduling['hour'] == 9 ? 'selected' : ''); ?>>A cada nove horas</option>
-                <option value="10" <?php echo ($scheduling['hour'] == 10 ? 'selected' : ''); ?>>A cada dez horas</option>
-                <option value="11" <?php echo ($scheduling['hour'] == 11 ? 'selected' : ''); ?>>A cada onze horas</option>
-                <option value="12" <?php echo ($scheduling['hour'] == 12 ? 'selected' : ''); ?>>A cada doze horas</option>
+                <option value="1" <?php echo ($scheduling['hour'] == 1 ? 'selected' : ''); ?>> <?php echo _('Hourly');?></option>
+                <option value="2" <?php echo ($scheduling['hour'] == 2 ? 'selected' : ''); ?>> <?php echo _('Every two hours');?></option>
+                <option value="3" <?php echo ($scheduling['hour'] == 3 ? 'selected' : ''); ?>> <?php echo _('Every three hours');?></option>
+                <option value="4" <?php echo ($scheduling['hour'] == 4 ? 'selected' : ''); ?>> <?php echo _('Every four hours');?></option>
+                <option value="5" <?php echo ($scheduling['hour'] == 5 ? 'selected' : ''); ?>> <?php echo _('Every five hours');?></option>
+                <option value="6" <?php echo ($scheduling['hour'] == 6 ? 'selected' : ''); ?>> <?php echo _('Every six hours');?></option>
+                <option value="7" <?php echo ($scheduling['hour'] == 7 ? 'selected' : ''); ?>> <?php echo _('Every seven hours');?></option>
+                <option value="8" <?php echo ($scheduling['hour'] == 8 ? 'selected' : ''); ?>> <?php echo _('Every eight hours');?></option>
+                <option value="9" <?php echo ($scheduling['hour'] == 9 ? 'selected' : ''); ?>> <?php echo _('Every none hours');?></option>
+                <option value="10" <?php echo ($scheduling['hour'] == 10 ? 'selected' : ''); ?>> <?php echo _('Every ten hours');?></option>
+                <option value="11" <?php echo ($scheduling['hour'] == 11 ? 'selected' : ''); ?>> <?php echo _('Every eleven hours');?></option>
+                <option value="12" <?php echo ($scheduling['hour'] == 12 ? 'selected' : ''); ?>> <?php echo _('Every twelve hours');?></option>
               </select>
 
             </div>
 
 
           <div class="form-group"  style="margin-top:6px;" >
-            <small><b>Hora Limite Inicial:</b></small>
+            <small><b><?php echo _('Initial Limit Time');?>:</b></small>
             <br />
             <select class="form-control" name="scheduling[limit_initial]">
               <option value="0" <?php echo ($scheduling['limit_initial'] == 0 ? 'selected' : ''); ?>>00:00</option>
@@ -280,7 +280,7 @@
           </div>
 
           <div class="form-group"  style="margin-top:6px;" >
-            <small><b>Hora Limite Final:</b></small>
+            <small><b><?php echo _('Final Limit Time');?>:</b></small>
             <br />
             <select class="form-control" name="scheduling[limit_final]">
               <option value="0" <?php echo ($scheduling['limit_final'] == 0 ? 'selected' : ''); ?>>00:00</option>
@@ -314,9 +314,9 @@
 
           </div>
 
-          <button type="submit" class="btn btn-primary pull-right" style="margin-left:3px;">Salvar</button>
+          <button type="submit" class="btn btn-primary pull-right" style="margin-left:3px;"><?php echo _('Save');?></button>
 
-          <a href="/admin/config.php?display=callsreport&action=scheduling" class="btn btn-primary pull-right">Cancelar</a>
+          <a href="/admin/config.php?display=callsreport&action=scheduling" class="btn btn-primary pull-right"><?php echo _('Cancel');?></a>
 
           <br />
           <br />

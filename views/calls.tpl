@@ -6,13 +6,13 @@
 
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport" role="tab">Relatório de Chamadas</a>
+      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
     </li>
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab">Relatório de Agentes</a>
+      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
     </li>
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab">Agendamentos</a>
+      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
     </li>
   </ul>
 
@@ -22,37 +22,37 @@
 
           <div class="btn-group pull-right btn-action">
               <button type="submit" value="Procurar" id="Procurar" class="btn btn-primary">
-              <i class="glyphicon glyphicon-search "></i> Procurar</button>
+              <i class="glyphicon glyphicon-search "></i> <?php echo _('Search');?></button>
               <?php //if($data_from_session): ?>
                 <button type="submit" value="1" name="calls[limpar]" class="btn btn-default">
-                <i class="glyphicon glyphicon-remove"></i> Limpar filtros</button>
+                <i class="glyphicon glyphicon-remove"></i> <?php echo _('Clean Filter');?></button>
               <?php //endif; ?>
           </div>
 
           <div class="form-group">
-            <small><b>De:</b></small>
+            <small><b><?php echo _('Of');?>:</b></small>
             <input type="text" name="calls[data_inicio]" value="<?php echo $data_inicio; ?>" class="input-sm form-control" style="width: 95px;font-weight:bolder !important;" placehold="Data inicial" />
             <input type="text" name="calls[hora_inicio]" value="<?php echo $hora_inicio; ?>" class="input-sm form-control" style="width: 60px;font-weight:bolder !important;" placehold="Hora inicial" />
           </div>
 
           <div class="form-group">
-            <small><b>Até:</b></small>
+            <small><b><?php echo _('Until');?>:</b></small>
             <input type="text" name="calls[data_fim]" value="<?php echo $data_fim; ?>" class="input-sm form-control"  style="width: 95px;font-weight:bolder !important;" placehold="Data final"  />
             <input type="text" name="calls[hora_fim]" value="<?php echo $hora_fim; ?>" class="input-sm form-control" style="width: 60px;font-weight:bolder !important;" placehold="Hora final" />
           </div>
 
           <div class="form-group">
-            <small><b>Origem:</b></small>
+            <small><b><?php echo _('Source');?>:</b></small>
             <input type="text" class="form-control input-sm" value="<?php echo $origem; ?>" name="calls[origem]" style="width: 100px;" /> 
           </div>
 
           <div class="form-group">
-            <small><b>Destino:</b></small>
+            <small><b><?php echo _('Destination');?>:</b></small>
             <input type="text" class="form-control input-sm" value="<?php echo $destino; ?>" name="calls[destino]" style="width: 100px;" />
           </div>
 
           <div class="form-group">
-            <small><b>Número:</b></small>
+            <small><b><?php echo _('Number');?>:</b></small>
             <input type="text" class="form-control input-sm" value="<?php echo $numero; ?>" name="calls[numero]" style="width: 100px;" />
           </div>
 
@@ -60,14 +60,14 @@
 
           <div class="form-group btn-group" style="margin-top:6px;margin-right:2px;">
             <?php if(count($sel_ramais) > 0): ?>
-              <button type="button" class="btn-ramais btn btn-default active" onclick="toogleRamais();"> <b><small>Extensões</b></small> </button>
+              <button type="button" class="btn-ramais btn btn-default active" onclick="toogleRamais();"> <b><small><?php echo _('Extensions');?></b></small> </button>
             <?php else: ?>
-              <button type="button" class="btn-ramais btn btn-default" onclick="toogleRamais();"> <b><small>Extensões</b></small> </button>
+              <button type="button" class="btn-ramais btn btn-default" onclick="toogleRamais();"> <b><small><?php echo _('Extensions');?></b></small> </button>
             <?php endif; ?>
           </div>                            
 
           <div class="form-group"  style="margin-top:6px;">
-            <small><b>Estado:</b></small>
+            <small><b><?php echo _('Disposition');?>:</b></small>
             <select class="dropdown-toggle btn btn-default multiselect form-control input-sm" multiple="multiple" name="calls[disposition][]">
                 <option <?php echo ( in_array('NO ANSWER',$sel_disposition) || isset($sel_disposition['ALL']) ? 'selected' : '') ?> value="NO ANSWER"> NO ANSWER </option>
                 <option <?php echo ( in_array('CONGESTION',$sel_disposition) || isset($sel_disposition['ALL']) ? 'selected' : '') ?> value="CONGESTION"> CONGESTION </option>
@@ -79,16 +79,16 @@
 
           <div style="display:<?php echo ( count($sel_ramais) > 0 ? 'block' : 'none' ) ?>;width:100%;height:192px;margin-top:8px;background-color:#f1f1f1;border-top:1px solid #fff;" class="busca_ramal">
                 <div class="col-xs-12" style="padding-left:15px;">
-                  <small><b>Extensões:</b></small>
+                  <small><b><?php echo _('Extensions');?>:</b></small>
                 </div>
                 <div class="col-xs-5">
                   <select class="form-control" size="8" id="ramais_1" multiple="multiple" name="calls[a_ramais][]" style="width:100%;height:150px;">
                       <?php foreach($ramais as $exten_number => $exten_name): ?>
                         <?php //if($selected_exten): ?>
                           <?php if(in_array($exten_number, $sel_ramais) || in_array('ALL', $sel_ramais) ):  ?>
-                              <option selected value="<?php echo $exten_number; ?>">Ramal <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
+                              <option selected value="<?php echo $exten_number; ?>"><?php echo _('Exten');?> <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
                           <?php else: ?>
-                              <option value="<?php echo $exten_number; ?>">Ramal <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
+                              <option value="<?php echo $exten_number; ?>"><?php echo _('Exten');?> <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
                           <?php endif; ?>
                         <?php //endif; ?>
                       <?php endforeach;?>
@@ -117,16 +117,16 @@
   	<thead>
           <tr>
               <td style="width: 20px;"></td>
-              <td><b>Data</b></td>
-              <td><b>Hora</b></td>
-              <td><b>CallerID</b></td>
-              <td><b>Origem</b></td>
-              <td><b>Destino</b></td>
-              <td><b>Estado</b></td>
-              <td><b>Duração</b></td>
-              <td><b>Ring Time</b></td>
-              <td><b>Talking Time</b></td>
-              <td><b>Áudio</b></td>
+              <td><b><?php echo _('Date');?></b></td>
+              <td><b><?php echo _('Time');?></b></td>
+              <td><b><?php echo _('CallerID');?></b></td>
+              <td><b><?php echo _('Source');?></b></td>
+              <td><b><?php echo _('Destination');?></b></td>
+              <td><b><?php echo _('Status');?></b></td>
+              <td><b><?php echo _('Duration');?></b></td>
+              <td><b><?php echo _('Ring Time');?></b></td>
+              <td><b><?php echo _('Talking Time');?></b></td>
+              <td><b><?php echo _('Áudio File');?></b></td>
           </tr>
   	</thead>
   	<tbody>
@@ -172,12 +172,12 @@
 <hr />
 
 <a href="/admin/config.php?display=callsreport&pdf=1" class="btn btn-primary pull-right" target="_blank">
-  Exportar PDF
+  <?php echo _('Export PDF');?>
 </a>
 
 
 <br />
-Total: <b> <?php echo $total; ?></b>
+<?php echo _('Total');?>: <b> <?php echo $total; ?></b>
 
 <div class="row">
   <div class="col-xs-10 col-sm-10" style="padding-left:0px;">
@@ -213,7 +213,7 @@ Total: <b> <?php echo $total; ?></b>
     function openAudio(url) {
 
 
-      var html = '<div id="waveform" style="min-height:220px;"><div class="loading label label-primary">Carregando...</div>';
+      var html = '<div id="waveform" style="min-height:220px;"><div class="loading label label-primary"><?php echo _(\'Loading\');?>...</div>';
       html += '</div>';
 
       html += '<div class="row" style="text-align:center;margin-bottom:10px;margin-top:10px;">';
@@ -328,63 +328,6 @@ Total: <b> <?php echo $total; ?></b>
       $('.btn-ramais').removeClass('active');
     }
   }
-
-/*
-  function fillNx() {       
-    var itens = new Array();
-    $('.nx').each(function() {
-        itens.push($(this).attr('value'));
-    });
-    if(itens.length > 0) {
-      $.post("/admin/config.php?display=chamadas&action=resolve", { itens: itens })
-          .done(function( data ) {
-            retorno = JSON.parse(data);
-            $.each(retorno.response, function(key, dat) {
-              if($('.nx_'+key).length > 0 && key != dat) {
-                  $('.nx_'+key).html(dat);
-              }
-            });
-      });
-    }
-  }
-
-  function toggleAll(change) {
-    if(change) {
-      $('.table-responsive tbody input[type=checkbox]').each(function() {
-          $(this).prop('checked', true);
-      });
-    }else{
-      $('.table-responsive tbody input[type=checkbox]').each(function() {
-          $(this).prop('checked', false);
-      });
-    }
-  }
-
-  function removeSelected() {
-    var itens = new Array();
-    $('.table-responsive tbody input[type=checkbox]').each(function() {
-        if( $(this).prop('checked') ) {
-          itens.push($(this).val());
-        }
-    });
-
-    if(itens.length > 0) {
-      if( confirm('Deseja remover os arquivos selecionados? Total selecionado: '+ itens.length) ) {
-        $.post("/admin/config.php?display=chamadas&action=multi_remove", { itens: itens})
-            .done(function( data ) {      
-                if(data == 1) {
-                  location.reload();
-                }else{
-                  alert('Não foi possível remover as gravações selecionadas.');
-                }
-            }
-        );
-      }
-    }else{
-      alert('Nanehum item selecionado.');
-    }
-  }
-*/
 
   var splayer = false;
   

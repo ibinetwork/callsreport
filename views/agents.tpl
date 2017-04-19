@@ -5,13 +5,13 @@
 
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport" role="tab">Relatório de Chamadas</a>
+      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
     </li>
     <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab">Relatório de Agentes</a>
+      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
     </li>
     <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab">Agendamentos</a>
+      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
     </li>
   </ul>
 
@@ -21,28 +21,28 @@
 
           <div class="btn-group pull-right btn-action">
               <button type="submit" value="Procurar" id="Procurar" class="btn btn-primary">
-              <i class="glyphicon glyphicon-search "></i> Procurar</button>
+              <i class="glyphicon glyphicon-search "></i> <?php echo _('Search');?></button>
               <?php //if($data_from_session): ?>
                 <button type="submit" value="1" name="agents[limpar]" class="btn btn-default">
-                <i class="glyphicon glyphicon-remove"></i> Limpar filtros</button>
+                <i class="glyphicon glyphicon-remove"></i> <?php echo _('Clean Filter');?></button>
               <?php //endif; ?>
           </div>
 
           <div class="form-group">
-            <small><b>De:</b></small>
+            <small><b><?php echo _('Of');?>:</b></small>
             <input type="text" name="agents[data_inicio]" value="<?php echo $data_inicio; ?>" class="input-sm form-control" style="width: 95px;font-weight:bolder !important;" placehold="Data inicial" />
             <input type="text" name="agents[hora_inicio]" value="<?php echo $hora_inicio; ?>" class="input-sm form-control" style="width: 60px;font-weight:bolder !important;" placehold="Hora inicial" />
           </div>
 
           <div class="form-group">
-            <small><b>Até:</b></small>
+            <small><b><?php echo _('Until');?>:</b></small>
             <input type="text" name="agents[data_fim]" value="<?php echo $data_fim; ?>" class="input-sm form-control"  style="width: 95px;font-weight:bolder !important;" placehold="Data final"  />
             <input type="text" name="agents[hora_fim]" value="<?php echo $hora_fim; ?>" class="input-sm form-control" style="width: 60px;font-weight:bolder !important;" placehold="Hora final" />
           </div>
 
           <br />
 
-          <small><b>Extensões:</b></small>
+          <small><b><?php echo _('Extensions')?>:</b></small>
           <div style="width:100%;height:192px;margin-top:8px;background-color:#f1f1f1;border-top:1px solid #fff;" class="busca_atendentes">
                 <div class="col-xs-12" style="padding-left:15px;">
                 </div>
@@ -51,9 +51,9 @@
                       <?php foreach($ramais as $exten_number => $exten_name): ?>
                         <?php //if($selected_exten): ?>
                           <?php if(in_array($exten_number, $sel_atendentes) || in_array('ALL', $sel_atendentes) ):  ?>
-                              <option selected value="<?php echo $exten_number; ?>">Ramal <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
+                              <option selected value="<?php echo $exten_number; ?>"><?php echo _('Exten');?> <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
                           <?php else: ?>
-                              <option value="<?php echo $exten_number; ?>">Ramal <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
+                              <option value="<?php echo $exten_number; ?>"><?php echo _('Exten');?> <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
                           <?php endif; ?>
                         <?php //endif; ?>
                       <?php endforeach;?>
@@ -83,22 +83,22 @@
   <thead style="text-align:center;background-color:#f1f1f1;">
         <tr>
             <td rowspan="2">
-              <br />Agente
+              <br /><?php echo _('Agent');?>
             </td>
-            <td colspan="3" style="border-left:1px solid #d2d2d2;">Entrante</td>
-            <td colspan="3" style="border-left:1px solid #d2d2d2;">Sainte</td>
-            <td colspan="3" style="border-left:1px solid #d2d2d2;">Total</td>
+            <td colspan="3" style="border-left:1px solid #d2d2d2;"><?php echo _('Inbound');?></td>
+            <td colspan="3" style="border-left:1px solid #d2d2d2;"><?php echo _('Outbound');?></td>
+            <td colspan="3" style="border-left:1px solid #d2d2d2;"><?php echo _('Total');?></td>
         </tr>
         <tr>
-            <td style="border-left:1px solid #d2d2d2;">Atendidas</td>
-            <td>Não Atendidas</td>
-            <td>Total</td>
-            <td style="border-left:1px solid #d2d2d2;">Atendidas</td>
-            <td>Não Atendidas</td>
-            <td>Total</td>
-            <td style="border-left:1px solid #d2d2d2;">Atendidas</td>
-            <td>Não Atendidas</td>
-            <td>Total</td>
+            <td style="border-left:1px solid #d2d2d2;"><?php echo _('Answer');?></td>
+            <td><?php echo _('No Answered');?></td>
+            <td><?php echo _('Total');?></td>
+            <td style="border-left:1px solid #d2d2d2;"><?php echo _('Answer');?></td>
+            <td><?php echo _('No Answered');?></td>
+            <td><?php echo _('Total');?></td>
+            <td style="border-left:1px solid #d2d2d2;"><?php echo _('Answer');?></td>
+            <td><?php echo _('No Answered');?></td>
+            <td><?php echo _('Total');?></td>
         </tr>        
   </thead>
   
@@ -189,12 +189,12 @@
 <hr />
 
 <a href="/admin/config.php?display=callsreport&action=agents&pdf=1" class="btn btn-primary pull-right" target="_blank">
-  Exportar PDF
+  <?php echo _('Export PDF');?>
 </a>
 
 
 <br />
-Total: <b> <?php echo count($results); ?></b>
+<?php echo _('Total');?>: <b> <?php echo count($results); ?></b>
 
 <div class="row">
   <div class="col-xs-10 col-sm-10" style="padding-left:0px;">
@@ -223,111 +223,10 @@ Total: <b> <?php echo count($results); ?></b>
 
 <script src="/admin/assets/callsreport/js/jquery.datetimepicker.js"></script>
 <script src="/admin/assets/callsreport/js/bootstrap-multiselect.js"></script>
-<!--<script src="/admin/assets/js/wavesurfer.min.js"></script> -->
 
 <script type="text/javascript">
-/*
- 
-    function openAudio(url) {
-
-      $('.modal_record_audio').show();
-
-      var html = '<div id="waveform" style="min-height:220px;"><div class="loading label label-primary">Carregando...</div>';
-      html += '</div>';
-
-      html += '<div class="row" style="text-align:center;margin-bottom:10px;margin-top:10px;">';
-      html += '<div style="width:100px;float:right;text-align:right;" id="total_time">00:00:00</div> ';
-      html += '<div style="width:100px;float:left;text-align:left;" id="atual_time">00:00:00</div> ';
-      html += '</div>';
-
-
-      html += '<div class="row" style="text-align:center;margin-bottom:10px;margin-top:10px;">';
-           
-      html += '<button class="btn btn-primary" onclick="splayer.play();">';
-      html +=   '<i class="glyphicon glyphicon-play"></i>';
-      html +=   ' ';
-      html += '</button>';
-
-
-      html += '<button class="btn btn-primary" onclick="splayer.pause();" style="margin-left:4px;">';
-      html +=   '<i class="glyphicon glyphicon-pause"></i>';
-      html +=   ' ';
-      html += '</button>';
-
-      html += '<button class="btn btn-primary" onclick="splayer.stop();" style="margin-left:4px;">';
-      html +=   '<i class="glyphicon glyphicon-stop"></i>';
-      html +=   ' ';
-      html += '</button>';
-
-      html += '<button class="btn btn-primary" onclick="splayer.seekTo(0);" style="margin-left:4px;">';
-      html +=   '<i class="glyphicon glyphicon-step-backward"></i>';
-      html +=   ' ';
-      html += '</button>';
-
-
-      html += '<button class="btn btn-primary" onclick="splayer.skipBackward(5);" style="margin-left:4px;">';
-      html +=   '<i class="glyphicon glyphicon-backward"></i>';
-      html +=   ' ';
-      html += '</button>';
-
-      html += '<button class="btn btn-primary" onclick="splayer.skipForward(5)" style="margin-left:4px;">';
-      html +=   '<i class="glyphicon glyphicon-forward"></i>';
-      html +=   ' ';
-      html += '</button>';      
-
-      html += '<button class="btn btn-primary" onclick="splayer.seekTo(100)" style="margin-left:4px;">';
-      html +=   '<i class="glyphicon glyphicon-step-forward"></i>';
-      html +=   ' ';
-      html += '</button>';      
-
-      html += '<button class="btn btn-primary" onclick="splayer.toggleMute();" style="margin-left:4px;">';
-      html +=   '<i class="glyphicon glyphicon-volume-off"></i>';
-      html +=   ' ';
-      html += '</button>';
-
-      html += '</div>';   
-
-      $('.record_audio').html(html);
-
-      splayer = new Player();
-      splayer.generate(url);
-
-    }
-
-    function convertTime(time) {
-
-      if (!time) {
-        return "00:00:00";
-      }
-      var sec_num = parseInt(time, 10); // don't forget the second param
-      var hours   = Math.floor(sec_num / 3600);
-      var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-      var seconds = sec_num - (hours * 3600) - (minutes * 60);
-
-      if (hours   < 10) {hours   = "0"+hours;}
-      if (minutes < 10) {minutes = "0"+minutes;}
-      if (seconds < 10) {seconds = "0"+seconds;}
-      return hours+':'+minutes+':'+seconds;
-    }
-*/
-
 
   $(document).ready(function() {
-
-        //splayer = new Player();
-
-        // setInterval(function() {
-        //   if($('#waveform').is(":visible") == false) {
-        //     splayer.stop();
-        //   }else{
-        //     $('#total_time').html( convertTime(splayer.getDuration()) );
-        //     $('#atual_time').html( convertTime(splayer.getCurrentTime()) );
-        //   }
-        // }, 1000);
-
-
-
-
 
         jQuery("input[name='agents[data_inicio]']").datetimepicker({
           timepicker:false,
