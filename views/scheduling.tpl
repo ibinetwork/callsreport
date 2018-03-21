@@ -3,17 +3,9 @@
 
 <div class="fpbx-container" style="margin-top:20px;">
 
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation">
-      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
-    </li>
-    <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
-    </li>
-    <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
-    </li>
-  </ul>
+  <?php echo $menus['top']; ?>
+
+  <?php echo $menus['menu']; ?>
 
   <div class="tab-content display">
     <div role="tabpanel" class="tab-pane active" style="padding-top: 15px;">        
@@ -26,6 +18,7 @@
                 <td><b><?php echo _('Description');?></b></td>
                 <td><b><?php echo _('Type');?></b></td>
                 <td><b><?php echo _('Extensions');?></b></td>
+                <td><b><?php echo _('Ivr');?></b></td>
                 <td><b><?php echo _('Periodicity');?></b></td>
                 <td><b><?php echo _('Day');?></b></td>
                 <td><b><?php echo _('Week Day');?></b></td>
@@ -39,13 +32,29 @@
                 <tr>
                     <td> <?php echo $evento['description'] ?> </td>
                     <td> 
+
                       <?php if($evento['type'] == 0): ?> 
-                          Relatório de Chamadas
+                          <?php echo _('Calls Report');?>
+
                       <?php elseif($evento['type'] == 1): ?> 
-                          Relatório de Agentes
+                          <?php echo _('Agents Report');?>
+
+                      <?php elseif($evento['type'] == 2): ?> 
+                          <?php echo _('Queues Report');?>
+
+                      <?php elseif($evento['type'] == 3): ?> 
+                          <?php echo _('Attended Report');?>
+
+                      <?php elseif($evento['type'] == 4): ?> 
+                          <?php echo _('Returned Report');?>
+
+                      <?php elseif($evento['type'] == 5): ?> 
+                          <?php echo _('Ivr Report');?>
+                          
                       <?php endif; ?> 
                     </td>
                     <td> <?php echo $evento['extens']; ?> </td>
+                    <td> <?php echo $evento['ivr']; ?> </td>
                     <td> 
                       <?php if($evento['periodicity'] == 0): ?> 
                           Mensal
@@ -132,7 +141,6 @@
 <script src="/admin/assets/callsreport/js/bootstrap-multiselect.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-
-
+    $('.alert-dismissable').hide();     
   });
 </script>

@@ -608,6 +608,197 @@ if(count($data) > 0) {
 
 		}
 
+		// queue report
+		if($relatorio['type'] == '2') {
+
+			$results = callsreport_get_queuesreport($dbcdr, $relatorio, 0, false, false, true);
+
+			$file = callsreport_export_pdf($results, 'queues', $relatorio, true);
+			$emails = explode(',', $relatorio['email']);
+
+			if($conf['smtp']['sender'] == '1') {
+
+				$subject = $relatorio['description'];
+				$subject = '=?UTF-8?B?'.base64_encode($subject).'?='; ;
+
+				$mail = new PHPMailer();
+				$mail->IsSMTP();		// Ativar SMTP
+				$mail->SMTPDebug = 1;		// Debugar: 1 = erros e mensagens, 2 = mensagens apenas
+				$mail->SMTPAuth = true;		// Autenticação ativada
+				$mail->SMTPSecure = 'tls';	// SSL REQUERIDO pelo GMail
+				$mail->Host = $conf['smtp']['host'];
+				$mail->Port = $conf['smtp']['port'];
+				$mail->Username = $conf['smtp']['username'];
+				$mail->Password = $conf['smtp']['password'];
+				$mail->SetFrom($conf['smtp']['username'], "Relatorio:");
+				$mail->Subject = $subject;
+				$mail->addAttachment($file);
+				$mail->Body = "Olá,\n\nEm anexo o relatório: <br /> {$relatorio['description']} <br />";
+                                $eemail = array_shift($emails);
+                                $mail->AddAddress( $eemail );
+                                foreach($emails as $eeemail) {
+                                        $mail->AddCC($eeemail);
+                                }
+
+				if(!$mail->Send()) {
+					echo $error = 'Mail error: '.$mail->ErrorInfo; 
+				} else {
+					echo $error = 'Mensagem enviada!';
+				}
+
+			}else{
+				foreach($emails as $email) {
+					$cmd = "echo 'Seu relatório' |  /bin/mail -s {$relatorio['description']} -a $file $email ";
+					exec($cmd);
+				}
+			}
+
+		}
+
+
+		// attended report
+		if($relatorio['type'] == '3') {
+
+			$results = callsreport_get_attended($dbcdr, $relatorio, 0, false, false, true);
+
+			$file = callsreport_export_pdf($results, 'queues', $relatorio, true);
+			$emails = explode(',', $relatorio['email']);
+
+			if($conf['smtp']['sender'] == '1') {
+
+				$subject = $relatorio['description'];
+				$subject = '=?UTF-8?B?'.base64_encode($subject).'?='; ;
+
+				$mail = new PHPMailer();
+				$mail->IsSMTP();		// Ativar SMTP
+				$mail->SMTPDebug = 1;		// Debugar: 1 = erros e mensagens, 2 = mensagens apenas
+				$mail->SMTPAuth = true;		// Autenticação ativada
+				$mail->SMTPSecure = 'tls';	// SSL REQUERIDO pelo GMail
+				$mail->Host = $conf['smtp']['host'];
+				$mail->Port = $conf['smtp']['port'];
+				$mail->Username = $conf['smtp']['username'];
+				$mail->Password = $conf['smtp']['password'];
+				$mail->SetFrom($conf['smtp']['username'], "Relatorio:");
+				$mail->Subject = $subject;
+				$mail->addAttachment($file);
+				$mail->Body = "Olá,\n\nEm anexo o relatório: <br /> {$relatorio['description']} <br />";
+                                $eemail = array_shift($emails);
+                                $mail->AddAddress( $eemail );
+                                foreach($emails as $eeemail) {
+                                        $mail->AddCC($eeemail);
+                                }
+
+				if(!$mail->Send()) {
+					echo $error = 'Mail error: '.$mail->ErrorInfo; 
+				} else {
+					echo $error = 'Mensagem enviada!';
+				}
+
+			}else{
+				foreach($emails as $email) {
+					$cmd = "echo 'Seu relatório' |  /bin/mail -s {$relatorio['description']} -a $file $email ";
+					exec($cmd);
+				}
+			}
+		}		
+
+
+		// retuened report
+		if($relatorio['type'] == '4') {
+
+			$results = callsreport_get_returned($dbcdr, $relatorio, 0, false, false, true);
+
+			$file = callsreport_export_pdf($results, 'queues', $relatorio, true);
+			$emails = explode(',', $relatorio['email']);
+
+			if($conf['smtp']['sender'] == '1') {
+
+				$subject = $relatorio['description'];
+				$subject = '=?UTF-8?B?'.base64_encode($subject).'?='; ;
+
+				$mail = new PHPMailer();
+				$mail->IsSMTP();		// Ativar SMTP
+				$mail->SMTPDebug = 1;		// Debugar: 1 = erros e mensagens, 2 = mensagens apenas
+				$mail->SMTPAuth = true;		// Autenticação ativada
+				$mail->SMTPSecure = 'tls';	// SSL REQUERIDO pelo GMail
+				$mail->Host = $conf['smtp']['host'];
+				$mail->Port = $conf['smtp']['port'];
+				$mail->Username = $conf['smtp']['username'];
+				$mail->Password = $conf['smtp']['password'];
+				$mail->SetFrom($conf['smtp']['username'], "Relatorio:");
+				$mail->Subject = $subject;
+				$mail->addAttachment($file);
+				$mail->Body = "Olá,\n\nEm anexo o relatório: <br /> {$relatorio['description']} <br />";
+                                $eemail = array_shift($emails);
+                                $mail->AddAddress( $eemail );
+                                foreach($emails as $eeemail) {
+                                        $mail->AddCC($eeemail);
+                                }
+
+				if(!$mail->Send()) {
+					echo $error = 'Mail error: '.$mail->ErrorInfo; 
+				} else {
+					echo $error = 'Mensagem enviada!';
+				}
+
+			}else{
+				foreach($emails as $email) {
+					$cmd = "echo 'Seu relatório' |  /bin/mail -s {$relatorio['description']} -a $file $email ";
+					exec($cmd);
+				}
+			}
+
+		}
+
+
+		// retuened report
+		if($relatorio['type'] == '4') {
+
+			$results = callsreport_get_ivrreport($dbcdr, $relatorio, 0, false, false, true);
+
+			$file = callsreport_export_pdf($results, 'queues', $relatorio, true);
+			$emails = explode(',', $relatorio['email']);
+
+			if($conf['smtp']['sender'] == '1') {
+
+				$subject = $relatorio['description'];
+				$subject = '=?UTF-8?B?'.base64_encode($subject).'?='; ;
+
+				$mail = new PHPMailer();
+				$mail->IsSMTP();		// Ativar SMTP
+				$mail->SMTPDebug = 1;		// Debugar: 1 = erros e mensagens, 2 = mensagens apenas
+				$mail->SMTPAuth = true;		// Autenticação ativada
+				$mail->SMTPSecure = 'tls';	// SSL REQUERIDO pelo GMail
+				$mail->Host = $conf['smtp']['host'];
+				$mail->Port = $conf['smtp']['port'];
+				$mail->Username = $conf['smtp']['username'];
+				$mail->Password = $conf['smtp']['password'];
+				$mail->SetFrom($conf['smtp']['username'], "Relatorio:");
+				$mail->Subject = $subject;
+				$mail->addAttachment($file);
+				$mail->Body = "Olá,\n\nEm anexo o relatório: <br /> {$relatorio['description']} <br />";
+                                $eemail = array_shift($emails);
+                                $mail->AddAddress( $eemail );
+                                foreach($emails as $eeemail) {
+                                        $mail->AddCC($eeemail);
+                                }
+
+				if(!$mail->Send()) {
+					echo $error = 'Mail error: '.$mail->ErrorInfo; 
+				} else {
+					echo $error = 'Mensagem enviada!';
+				}
+
+			}else{
+				foreach($emails as $email) {
+					$cmd = "echo 'Seu relatório' |  /bin/mail -s {$relatorio['description']} -a $file $email ";
+					exec($cmd);
+				}
+			}
+
+		}
+
+
 	}
 
 }

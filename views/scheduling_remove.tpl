@@ -3,17 +3,9 @@
 
 <div class="fpbx-container" style="margin-top:20px;">
 
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation">
-      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
-    </li>
-    <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
-    </li>
-    <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
-    </li>
-  </ul>
+  <?php echo $menus['top']; ?>
+
+  <?php echo $menus['menu']; ?>
 
   <div class="tab-content display">
     <div role="tabpanel" class="tab-pane active" style="padding-top: 15px;">
@@ -41,6 +33,14 @@
                       <?php echo _('Calls Report');?>
                   <?php elseif($scheduling['type'] == 1): ?> 
                       <?php echo _('Agents Report');?>
+                  <?php elseif($scheduling['type'] == 2): ?> 
+                      <?php echo _('Queues Report');?>
+                  <?php elseif($scheduling['type'] == 3): ?> 
+                      <?php echo _('Attended Report');?>
+                  <?php elseif($scheduling['type'] == 4): ?> 
+                      <?php echo _('Returned Report');?>
+                  <?php elseif($scheduling['type'] == 5): ?> 
+                      <?php echo _('Ivr Report');?>
                   <?php endif; ?> 
                 </td>
                 <td> <?php echo $scheduling['extens'] ?> </td>
@@ -106,7 +106,8 @@
     $('.multiselect').multiselect({
         filterBehavior: 'both'
     });
-
+    $('.alert-dismissable').hide();     
+    
   });
 
 </script>

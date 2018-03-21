@@ -3,17 +3,9 @@
 
 <div class="fpbx-container" style="margin-top:20px;">
 
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation">
-      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
-    </li>
-    <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
-    </li>
-    <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
-    </li>
-  </ul>
+  <?php echo $menus['top']; ?>
+
+  <?php echo $menus['menu']; ?>
 
   <div class="tab-content display">
     <div role="tabpanel" class="tab-pane active" style="padding-top: 15px;">
@@ -40,6 +32,10 @@
             <select class="dropdown-toggle btn btn-default form-control input-sm" name="scheduling[type]">
                 <option value="0" <?php echo ($scheduling['type'] == 0 ? 'selected' : ''); ?>><?php echo _('Calls Report');?></option>
                 <option value="1" <?php echo ($scheduling['type'] == 1 ? 'selected' : ''); ?>><?php echo _('Agents Report');?></option>            
+            <option value="2"><?php echo _('Queues Report');?></option>
+            <option value="3"><?php echo _('Attended Report');?></option>
+            <option value="4"><?php echo _('Returned Report');?></option>
+            <option value="5"><?php echo _('Ivr Report');?></option>
             </select>
           </div>    
 
@@ -53,7 +49,7 @@
             </select>
           </div>  
 -->
-          <div class="form-group"  style="margin-top:6px;">
+          <div class="form-group box_exten"  style="margin-top:6px;">
             <small><b><?php echo _('Extensions');?>:</b></small>
             <div style="width:100%;height:192px;margin-top:8px;border-top:1px solid #fff;" class="busca_ramal">
                   <div class="col-xs-12" style="padding-left:15px;">
@@ -61,7 +57,7 @@
                   </div>
                   <div class="col-xs-5" style="padding-left:0px;">
                     <select class="form-control" size="8" id="ramais_1" multiple="multiple" name="scheduling[a_ramais][]" style="width:100%;height:150px;">
-                        <?php foreach($ramais as $exten_number => $exten_name): ?>
+                        <?php foreach($extens as $exten_number => $exten_name): ?>
                           <?php //if($selected_exten): ?>
                             <?php if(in_array($exten_number, $scheduling['extens']) || in_array('ALL', $scheduling['extens']) ):  ?>
                                 <option selected value="<?php echo $exten_number; ?>">Ramal <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
@@ -86,6 +82,34 @@
             </div>     
           </div>
 
+
+      <div class="form-group box_queue"  style="margin-top:6px;display:none;">
+        <small><b><?php echo _('Queues');?>:</b></small>
+        <br />
+        <select class="dropdown-toggle btn btn-default form-control input-sm" name="scheduling[queue]">
+          <?php foreach($queues as $queue_id => $queue): ?>
+              <?php if($queue_id == $scheduling['queue']):?>
+                <option selected value="<?php echo $queue_id ?>"> <?php echo $queue ?> </option>
+              <?php else: ?>
+                <option value="<?php echo $queue_id ?>"> <?php echo $queue ?> </option>
+              <?php endif; ?>                 
+          <?php endforeach; ?>
+        </select>
+      </div>  
+
+      <div class="form-group box_ivr"  style="margin-top:6px;display:none;">
+        <small><b><?php echo _('Ivr');?>:</b></small>
+        <br />
+        <select class="dropdown-toggle btn btn-default form-control input-sm" name="scheduling[ivr]">
+          <?php foreach($ivrs as $ivr_id => $ivr): ?>
+              <?php if($ivr_id == $scheduling['ivr']):?>
+                <option selected value="<?php echo $ivr_id ?>"> <?php echo $ivr ?> </option>
+              <?php else: ?>
+                <option value="<?php echo $ivr_id ?>"> <?php echo $ivr ?> </option>
+              <?php endif; ?>            
+          <?php endforeach; ?>
+        </select>
+      </div>            
 
           <div class="form-group"  style="margin-top:6px;">
             <small><b><?php echo _('Periodicity');?>:</b></small>
@@ -328,7 +352,43 @@
 
 <script src="/admin/assets/callsreport/js/jquery.datetimepicker.js"></script>
 <script src="/admin/assets/callsreport/js/bootstrap-multiselect.js"></script>
+<script src="/admin/assets/callsreport/js/jquery.mask.js"></script>
+
 <script type="text/javascript">
+
+  function changeTypeReport() {
+
+    var type = $('select[name="scheduling[type]"]').val(); 
+    
+    // queues
+    if(type == "2") {
+      $('.box_ivr').hide();
+      $('.box_queue').show();
+      $('.box_exten').hide();
+    }
+    // atendidas
+    else if(type == "3") {
+      $('.box_ivr').hide();
+      $('.box_queue').hide();
+      $('.box_exten').hide();
+    }
+    // atendidas
+    else if(type == "4") {
+      $('.box_ivr').hide();
+      $('.box_queue').hide();
+      $('.box_exten').hide();
+    }    
+    // ura 
+    else if(type == "5") {
+      $('.box_ivr').show();
+      $('.box_queue').hide();
+      $('.box_exten').hide();
+    }else{
+      $('.box_ivr').hide();
+      $('.box_queue').hide();
+      $('.box_exten').show();      
+    }
+  }
 
   function changePeriodicity() {
 
@@ -372,6 +432,7 @@
     }    
   }
 
+
   $(document).ready(function() {
 
     $('#add_ramais').click(function() {
@@ -398,6 +459,10 @@
       changePeriodicity();
     });
 
+    $('select[name="scheduling[type]"]').change(function() {
+      changeTypeReport();
+    });    
+
     $('input[name="scheduling[day]"]').keyup(function() {
       var number = $('input[name="scheduling[day]"]').val();
       if(number > 31) {
@@ -406,6 +471,9 @@
     });
 
     changePeriodicity();
+    changeTypeReport();
+
+    $('.alert-dismissable').hide();     
 
   });
 

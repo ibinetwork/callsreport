@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-19 15:46-0300\n"
-"PO-Revision-Date: 2017-04-19 16:10-0300\n"
+"PO-Revision-Date: 2018-03-18 20:38-0300\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: /home/rafael/callsreport/bin/verify_scheduling.php:113
 msgid "The autoloader is damaged. Please run: "
@@ -448,3 +448,102 @@ msgstr "Editar"
 #: /home/rafael/callsreport/views/scheduling.tpl:123
 msgid "No scheduling"
 msgstr "Sem agendamentos"
+
+msgid "Queues Report"
+msgstr "Relatório de Filas"
+
+msgid "Queues"
+msgstr "Filas"
+
+msgid "Answered"
+msgstr "Atendidas"
+
+msgid "Abandoned"
+msgstr "Abandonadas"
+
+msgid "Ring No Answer"
+msgstr "Não Atendidas"
+
+msgid "Average Call Time"
+msgstr "Tempo Médio de Chamada"
+
+msgid "Average Waiting Time"
+msgstr "Tempo Médio de Espera"
+
+msgid "Average Conversation Time"
+msgstr "Tempo Médio de Conversação"
+
+msgid "Attended Report"
+msgstr "Relatório de Atendidas"
+
+msgid "Returned Report"
+msgstr "Relatório de Retornos"
+
+msgid "Gnovit Reports"
+msgstr "Relatórios Gnovit"
+
+msgid "IVR Report"
+msgstr "Relatório de URA"
+
+msgid "Choice"
+msgstr "Escolha"
+
+msgid "Queue"
+msgstr "Fila"
+
+msgid "IVR"
+msgstr "URA"
+
+msgid "Reports"
+msgstr "Relatórios"
+
+msgid "General Statistics"
+msgstr "Estatística Geral"
+
+msgid "Queue Statistic"
+msgstr "Estatística da Fila"
+
+msgid "Analytics"
+msgstr "Analítico"
+
+msgid "Total Calls"
+msgstr "Total de Chamadas"
+
+msgid "Time Limit"
+msgstr "Tempo Limite"
+
+msgid "Total Call Time"
+msgstr "Tempo Total das Chamadas"
+
+msgid "Total Hold Time"
+msgstr "Tempo Total de Espera"
+
+msgid "Average Hold Time"
+msgstr "Tempo Médio de Espera"
+
+msgid "Total Attendant"
+msgstr "Total de Atendimentos"
+
+msgid "Attendant"
+msgstr "Atendente"
+
+msgid "Attendent Statistics"
+msgstr "Estatística do Atendente"
+
+msgid "Attended"
+msgstr "Atendidas"
+
+msgid "Returned"
+msgstr "Retornado"
+
+msgid "Average Return Time"
+msgstr "Tempo Médio de Retorno"
+
+msgid "Total Returned"
+msgstr "Total Retornado"
+
+msgid "Ivr"
+msgstr "Ura"
+
+msgid "No data found"
+msgstr "Nenhum dado encontrado"

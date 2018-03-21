@@ -3,17 +3,9 @@
 
 <div class="fpbx-container" style="margin-top:20px;">
 
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation">
-      <a href="/admin/config.php?display=callsreport" role="tab"><?php echo _('Calls Report');?></a>
-    </li>
-    <li role="presentation" class="active">
-      <a href="/admin/config.php?display=callsreport&action=agents" role="tab"><?php echo _('Agents Report');?></a>
-    </li>
-    <li role="presentation">
-      <a href="/admin/config.php?display=callsreport&action=scheduling" role="tab"><?php echo _('Scheduling');?></a>
-    </li>
-  </ul>
+  <?php echo $menus['top']; ?>
+
+  <?php echo $menus['menu']; ?>
 
   <div class="tab-content display">
     <div role="tabpanel" class="tab-pane active" style="padding-top: 15px;">
@@ -48,7 +40,7 @@
                 </div>
                 <div class="col-xs-5">
                   <select class="form-control" size="8" id="atendentes_1" multiple="multiple" name="calls[a_ramais][]" style="width:100%;height:150px;">
-                      <?php foreach($ramais as $exten_number => $exten_name): ?>
+                      <?php foreach($extens as $exten_number => $exten_name): ?>
                         <?php //if($selected_exten): ?>
                           <?php if(in_array($exten_number, $sel_atendentes) || in_array('ALL', $sel_atendentes) ):  ?>
                               <option selected value="<?php echo $exten_number; ?>"><?php echo _('Exten');?> <?php echo $exten_number; ?> (<?php echo $exten_name; ?>)</option>
@@ -108,8 +100,8 @@
           <tr style="text-align:center;">
               <td>
                 <b><?php echo $agent; ?></b><br />
-                <?php if(isset($ramais[$agent])): ?>
-                  <?php echo $ramais[$agent];?>
+                <?php if(isset($extens[$agent])): ?>
+                  <?php echo $extens[$agent];?>
                 <?php endif; ?>                
 
               </td>

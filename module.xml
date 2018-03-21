@@ -1,6 +1,6 @@
 <module>
 	<rawname>callsreport</rawname>
-	<name>Calls Report</name>
+	<name>Gnovit Reports</name>
 	<version>0.1.0.0</version>
 	<candisable>yes</candisable>
 	<publisher>Gnovit.com.</publisher>
@@ -9,13 +9,13 @@
 		*0.0.0.1* (beta)
 	</changelog>
 	<description>
-		Módulo de relatórios de chamadas
+		Módulo de relatórios da Gnovit
 	</description>
 	<attention>
 	</attention>
 	<category>Reports</category>
 	<menuitems>
-		<callsreport>Calls Report</callsreport>
+		<callsreport>Gnovit Reports</callsreport>
 	</menuitems>
 </module>
 
